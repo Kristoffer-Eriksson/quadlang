@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild src/index.ts --bundle --outfile=out/index.js --platform=browser --target=es2020 --sourcemap",
+    "watch": "esbuild src/index.ts --bundle --outfile=out/index.js --platform=browser --target=es2020 --sourcemap --watch",
+    "serve": "esbuild src/index.ts --bundle --outfile=out/index.js --platform=browser --target=es2020 --sourcemap --servedir=out --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Kristoffer-Eriksson/quadlang/issues"
   },
-  "homepage": "https://github.com/Kristoffer-Eriksson/quadlang#readme"
+  "homepage": "https://github.com/Kristoffer-Eriksson/quadlang#readme",
+  "dependencies": {
+    "three": "^0.180.0"
+  }
 }
